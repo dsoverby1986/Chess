@@ -37,6 +37,7 @@ textarea {
     border: 2px solid silver ridge;
     padding-top: 20px;
     padding-left: 20px;
+    font-size: 60px;
 }
 
 body > .container {
