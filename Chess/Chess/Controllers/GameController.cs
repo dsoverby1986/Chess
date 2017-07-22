@@ -16,7 +16,7 @@ namespace Chess.Controllers
         public ActionResult Index()
         {
             ApplicationUser user = db.Users.Find(User.Identity.GetUserId());
-            List<Square> squares = GetBoardSquares();
+            List<Square> squares = new List<Square>();//GetBoardSquares();
             Game game = new Game()
             {
                 Player1 = user,

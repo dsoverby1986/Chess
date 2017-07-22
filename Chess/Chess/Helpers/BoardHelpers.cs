@@ -10,8 +10,8 @@ namespace Chess.Helpers
     {
         public enum HorizontalCoordinates
         {
-            A,
-            B,
+            A = 1,
+            B = 2,
             C,
             D,
             E,
@@ -22,7 +22,7 @@ namespace Chess.Helpers
 
         public enum VerticalCoordinates
         {
-            _1,
+            _1 = 1,
             _2,
             _3,
             _4,
@@ -68,29 +68,29 @@ namespace Chess.Helpers
             { new Tuple<int, int>((int)HorizontalCoordinates.H, (int)VerticalCoordinates._8), new Piece("Rook", new Movement(false, false, true, false, false), true) }
         };
 
-        public static List<Square> GetBoardSquares()
-        {
-            List<Square> squares = new List<Square>();
+        //public static List<Square> GetBoardSquares()
+        //{
+        //    List<Square> squares = new List<Square>();
 
-            for (var i = Board.Height; i >= 1; i--)
-            {
-                for(int j = 1; j <= Board.Width; j++)
-                {
-                    Square newSquare = new Square();
+        //    for (var i = Board.Height; i >= 1; i--)
+        //    {
+        //        for(int j = 1; j <= Board.Width; j++)
+        //        {
+        //            Square newSquare = new Square();
 
-                    if (i % 2 == 0 && j % 2 != 0)
-                        newSquare.White = true;
+        //            if (i % 2 == 0 && j % 2 != 0)
+        //                newSquare.White = true;
 
-                    newSquare.VerticalCoordinate = i;
-                    newSquare.HorizontalCoordinate = j;
-                    Piece initialPiece = BoardSetupPieceMap[new Tuple<int, int>(j, i)];
-                    newSquare.InitialPiece = initialPiece;
-                    newSquare.CurrentPiece = initialPiece;
-                    squares.Add(newSquare);
-                }
-            }
+        //            newSquare.VerticalCoordinate = i;
+        //            newSquare.HorizontalCoordinate = j;
+        //            Piece initialPiece = BoardSetupPieceMap[new Tuple<int, int>(j, i)];
+        //            newSquare.InitialPiece = initialPiece;
+        //            newSquare.CurrentPiece = initialPiece;
+        //            squares.Add(newSquare);
+        //        }
+        //    }
 
-            return squares;
-        }
+        //    return squares;
+        //}
     }
 }
