@@ -8,7 +8,7 @@ namespace Chess.Models
         public string HorizontalCoordinate { get; set; }
         public int VerticalCoordinate { get; set; }
         public bool White { get; set; }
-        public string InitialPiece { get; set; }
+        public Piece InitialPiece { get; set; }
         public Piece CurrentPiece { get; set; }
     }
 }
